@@ -1,0 +1,510 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    /*background: url("bg.jpg") center / cover no-repeat;*/
+    /*height: 100vh;*/
+    /*backdrop-filter: blur(5px);*/
+    font-family: 'Roboto';
+}
+
+
+.input {
+    outline: none;
+    border: none;
+    /*border-bottom: 1.5px solid white;*/
+    border-bottom: 1.5px solid black;
+    transition: border 0.3s;
+    margin: 20px;
+    background: none;
+    position: relative;
+}
+
+.input::placeholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+
+.input:focus::placeholder {
+    font-size: 8px;
+    color: #009dff;
+}
+
+.input:focus {
+    border-bottom: 1.5px solid #009dff;
+}
+
+
+.input2 {
+    outline: none;
+    border: none;
+    /*border-bottom: 1.5px solid white;*/
+    border-bottom: 1.5px solid black;
+    transition: border 0.3s;
+    margin: 20px;
+    background: none;
+    position: relative;
+}
+
+.input2::placeholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+
+.input2:focus::placeholder {
+    font-size: 8px;
+    color: #009dff;
+}
+
+.input2:focus {
+    border-bottom: 1.5px solid #009dff;
+}
+
+.link {
+    margin: 20px;
+    display: block;
+    color: #009dff;
+}
+
+.buttons {
+    display: flex;
+}
+
+.reset {
+    display: block;
+    margin: 20px;
+    color: #009dff;
+}
+
+.counter {
+    font-size: 20px;
+    color: red;
+    margin: 20px;
+}
+
+.calculator-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plus-text {
+    display: inline-block;
+    margin: 20px;
+    color: white;
+    background: #00bc06;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.subtraction-text {
+    margin-left: 20px;
+    display: inline-block;
+    margin: 20px;
+    color: white;
+    background: #00bc06;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.plus-text.active-mode {
+    background: red;
+}
+
+.subtraction-text.active-mode {
+    background: red;
+}
+
+.multiply-text {
+    display: inline-block;
+    margin: 20px;
+    color: white;
+    background: #00bc06;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.divide-text {
+    margin-left: 20px;
+    display: inline-block;
+    margin: 20px;
+    color: white;
+    background: #00bc06;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.multiply-text.active-mode {
+    background: red;
+}
+
+.divide-text.active-mode {
+    background: red;
+}
+
+.divide2-text {
+    margin-left: 20px;
+    display: inline-block;
+    margin: 20px;
+    color: white;
+    background: #00bc06;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.divide2-text.active-mode {
+    background: red;
+}
+
+.plus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator-settings {
+    display: inline-block;
+    margin: 10px;
+    background: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.settings {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 25%;
+    background: white;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    z-index: 2;
+    transition: left 0.3s;
+}
+
+.settings.active {
+    left: 0;
+}
+
+.settings-menu {
+    padding: 20px;
+}
+
+.settings-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.setting {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: #00bc06;
+}
+
+
+.setting1-options {}
+
+.setting1-option1 {}
+
+.setting1-option img {
+    max-width: 100%;
+    width: 230px;
+    height: 130px;
+    cursor: pointer;
+}
+
+.setting1-option {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.setting1-option2 {}
+
+.setting1-option3 {}
+
+.setting1-option4 {
+    width: 230px;
+    height: 130px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px auto;
+    border: 2px solid #009dff;
+}
+
+body.bg1 {
+    background: url("img1.jpg") center / cover no-repeat;
+    height: 100vh;
+}
+
+body.bg1 .setting1-option1 img {
+    border: 2px solid #009dff;
+}
+
+body.bg1 .setting1-option4 {
+    border: 2px solid black;
+}
+
+body.bg2 {
+    background: url("img2.jpg") center / cover no-repeat;
+    height: 100vh;
+}
+
+body.bg2 .setting1-option2 img {
+    border: 2px solid #009dff;
+}
+
+body.bg2 .setting1-option4 {
+    border: 2px solid black;
+}
+
+body.bg3 {
+    background: url("bg.jpg") center / cover no-repeat;
+    height: 100vh;
+}
+
+body.bg3 .setting1-option3 img {
+    border: 2px solid #009dff;
+}
+
+body.bg3 .setting1-option4 {
+    border: 2px solid black;
+}
+
+body.bg4 {
+    background: white;
+    height: 100vh;
+}
+
+body.bg4 .setting1-option4 img {
+    border: 2px solid #009dff;
+}
+
+body.bg5 {
+    background: url("img3.jpg") center / cover no-repeat;
+    height: 100vh;
+}
+
+body.bg6 {
+    background: url("img4.jpg") center / cover no-repeat;
+    height: 100vh;
+}
+
+body.bg7 {
+    background: url("img5.jpg") center / cover no-repeat;
+    height: 100vh;
+}
+
+body.bg8 {
+    background: url("img6.jpg") center / cover no-repeat;
+    height: 100vh;
+}
+
+body.bg9 {
+    background: url("img7.jpg") center / cover no-repeat;
+    height: 100vh;
+}
+
+body.bg10 {
+    background: url("img8.jpg") center / cover no-repeat;
+    height: 100vh;
+}
+
+body.bg11 {
+    background: url("img9.jpg") center / cover no-repeat;
+    height: 100vh;
+}
+
+.setting2-option {
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.setting2-option1 {
+    margin-top: 30px;
+    font-family: 'Roboto';
+}
+
+.setting2-option2 {
+    font-family: 'Oswald';
+}
+
+.setting2-option3 {
+    font-family: 'Rubik Dirt';
+}
+
+body.main-font1 {
+    font-family: 'Roboto';
+}
+
+body.main-font2 {
+    font-family: 'Oswald';
+}
+
+body.main-font3 {
+    font-family: 'Rubik Dirt';
+}
+
+@media (max-width: 1000px) {
+    .settings {
+        width: 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .buttons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 550px) {
+    .settings {
+        width: 100%;
+    }
+}
+
+.store-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #009dff;
+}
+
+.store-link:hover {
+    text-decoration: underline;
+}
+
+/*body.bg5 {*/
+/*    background: url('img3.jpg') center / cover no-repeat;*/
+/*    height: 100vh;*/
+/*}*/
+
+.back-link {
+    display: inline-block;
+    margin: 20px;
+    color: #009dff;
+    cursor: pointer;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: 300px;
+    width: 350px;
+    margin-left: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.images-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.modal-window {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white;
+    z-index: 2;
+    display: none;
+    overflow: auto;
+}
+
+.modal-window.opened {
+    display: block;
+}
+
+.range-wrap {
+    margin-top: 30px;
+}
+.range-input::-webkit-slider-runnable-track {
+    background: rgb(229, 229, 229);
+    border-radius: 10px;
+}
+
+
+/*.dark-theme_area {*/
+/*    max-width: 60px;*/
+/*    background: rgb(229, 229, 229);*/
+/*    height: 30px;*/
+/*    border-radius: 25px;*/
+/*    margin: 20px auto;*/
+/*    position: relative;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.dark-theme_circle {*/
+/*    background: #0275ff;*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*    border-radius: 50%;*/
+/*    transition: 0.3s;*/
+/*}*/
+
+/*.dark-theme_circle.darkTheme {*/
+/*    margin-left: 30px;*/
+/*}*/
+
+/*body.darkTheme {*/
+/*    background: #1c1c1c;*/
+/*    color: white;*/
+/*}*/
+
+/*.settings.darkTheme {*/
+/*    background: black;*/
+/*}*/
+
+.save-button {
+    display: flex;
+    justify-content: center;
+    color: #009dff;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.save-button:hover {
+    text-decoration: underline;
+}
